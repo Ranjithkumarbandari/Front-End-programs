@@ -18,6 +18,26 @@
         #ss{
             color: brown;
         }
+        /* universal selector */
+        *{
+           background-color: whitesmoke; 
+        }
+        /* descendant selectors */
+        div p{
+            color: blueviolet;
+        }
+        /* attribute selector */
+        input[type="text"]{
+            background-color: bisque;
+        }
+        /* grouping selector */
+        h1,h2,h3{
+            font-size: smaller;
+        }
+        /* child selector */
+        ol>li{
+            background-color: orangered;
+        }
     </style>
     <!-- link tag used for linking another file -->
     <link rel="stylesheet" href="style.css">
@@ -28,5 +48,18 @@
     <h2 id="#ss">Ranjith</h2>
     <h3 class="my">Ranjith</h3>
     <h4>Ranjith</h4>
+    <label for="text">user name</label>
+    <input type="text" id="text" name="text">
+    <div>
+        <p>Descendent Selector</p>
+    </div>
+    <ol>
+        <li>
+            <ul>
+                <li>item1</li>
+                <li>item2</li> 
+            </ul>
+        </li>
+    </ol>
 </body>
 </html>
