@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* auto-fill fills the container with as many grid items as possible.
+
+auto-fit stretches the grid items to fit the container's width. */
         .grid-container{
                 display: grid;
                 grid-template-columns: repeat(4,1fr);
                 grid-template-rows: repeat(1,1fr);
                 gap: 1px;
                 order: -1;
-                grid-template-rows: repeat(auto-fit,minmax(100px 1fr));
-            }
+                grid-template-columns: minmax(50px, 3fr) minmax(150px, 2fr);
+                grid-template-rows: minmax(50px, 3fr) minmax(150px, 2fr);
+
+            }   
         .grid-item{
             background-color: blue;
             text-align: center;
