@@ -22,7 +22,13 @@ let myPromise=new Promise((resolve , reject) => {
 });
 
 myPromise
-.then((value)=>{console.log(value+"full")})
+.then((value)=>{console.log(value+"full")
+return "Ram"
+})
+.then((mess)=>{console.log(mess)
+  return 10+20
+})
+.then((m)=>{console.log(m)})
 .catch((error)=>{console.log(error+"null")})
   </script>
 </body>
