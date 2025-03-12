@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+let myPromise=new Promise((resolve , reject) => {
+  let num = Math.random();
+  if(num>0.5){
+   
+    resolve("Greater")
+  }else{
+    reject("smaller")
+  }
+
+  // setTimeout(()=> {
+  //   resolve("Resolving in 2's")},2000);
+});
+
+myPromise
+.then((value)=>{console.log(value+"full")})
+.catch((error)=>{console.log(error+"null")})
+  </script>
+</body>
+</html>
