@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let p1=new Promise((resolve , reject)=>{
+        setTimeout(resolve("first AAA"),1000)
+    });
+    let p2=new Promise((resolve , reject)=>{
+        setTimeout(reject("two BBB"),2000)
+    });
+    let p3=new Promise((resolve , reject)=>{
+        setTimeout(resolve("third CCC"),3000)
+    });
+   Promise.allSettled([p1,p2,p3])
+.then((value)=>{console.log(value)
+}).catch((error)=>{console.log(error)})
+</script>
+</body>
+</html>
