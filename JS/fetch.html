@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="fetchData()">Fetch data</button>
+    <div id="parent"></div>
+    <script>
+        let url = "https://jsonplaceholder.typicode.com/posts";
+        let parentEl=document.getElementById("parent")
+        
+        function fetchData(){
+            fetch(url)
+            .then((res)=>{return res.json()})
+            .then((data)=>{console.log(data)
+                data.forEach((obj)=>{
+                    let divEl=document.createElement("div");
+                    divEl.innerHTML=`<div> ID : ${obj.id} - Title : ${obj.title}</div>
+                    <p> ${obj.body}</p>`
+                    parentEl.appendChild(divEl)
+                })
+                
+            })
+            .catch((error)=> console.log(error))
+         }
+    </script>
+</body>
+</html>

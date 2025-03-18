@@ -35,7 +35,7 @@
                 var productlist=document.createElement('ol');
                 products.forEach(function(product){
                     var listItems = document.createElement('li');
-                    listItems.textContent =`${product.if} - $${product.name} - $${product.price} - $${product.category}`;
+                    listItems.textContent =`${product.name} - $${product.price} - $${product.category}`;
                     productlist.appendChild(listItems);
                 });
                 document.body.appendChild(productlist);
