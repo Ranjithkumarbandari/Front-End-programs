@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#noaction">
+        <div id="container">
+            <h1>BMI Check</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter the name"><br>
+            <label for="Height">Height</label>
+            <input type="number" name="Number" id="Height" placeholder="Enter the Height in cm"><br>
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" placeholder="Enter the Weight i kg"><br>
+            <button id="butoon" onclick="opennow(event)">Calculate</button><br>
+            <div id="result"></div>
+        </div>
+    </form>
+    <script>
+        
+        function opennow(event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value;
+    let Height = +document.getElementById("Height").value / 100;
+    let Weight = +document.getElementById("weight").value;
+    let BMI = Weight / (Height * Height);
+    console.log(name);
+    console.log("Height in meters:", Height);
+    console.log("Weight in kg:", Weight);
+    console.log("BMI:", BMI);
+
+    document.getElementById("result").innerText = `${name}, your BMI is ${BMI.toFixed(2)}`;
+    document.getElementById("name").value="";
+    document.getElementById("Height").value="";
+    document.getElementById("weight").value="";
+}
+
+    </script>
+</body>
+</html>
